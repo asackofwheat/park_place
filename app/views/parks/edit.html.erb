@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h2>Update Features</h2>
+      <%= form_for @park do |f| %>
+        <%= f.label "Features" %><br>
+        <%= f.collection_check_boxes(:feature_ids, Feature.all, :id, :name) %>
+        <br><br>
+        <%= f.fields_for :features, @feature do |feature_field| %>
+          <%= feature_field.label :name, "Create Feature " %>
+          <%= feature_field.text_field :name %>
+        <% end %>
+        <br><br>
+        <%= f.submit %>
+        
+      <% end %>
+    </div>
+  </div>
+
+</div>

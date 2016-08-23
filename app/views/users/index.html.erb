@@ -1,0 +1,18 @@
+<main class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <h2>Welcome to Park Place!</h2>
+      <h3>Your guide to San Francisco Parks</h3>
+      <br><br>
+      <div class="form-group form-inline">
+        <%= form_tag parks_path, :method => 'get' do %>
+          <%= text_field_tag "park_name", nil, placeholder: "Park Name", class: "form-control" %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <br><br>
+      <%= link_to "Create a New User", new_user_path %>
+    </div>
+  </div>
+</main>

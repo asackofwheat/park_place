@@ -1,0 +1,11 @@
+<section class="container main-header">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= image_tag 'park.png' %>
+      <p class="title-name"><%= @park["parkname"] %>  
+        <%= new_park_buttons(@park, @score) if signed_in_user? %>
+      </p>
+    </div>
+  </div>
+  
+</section>

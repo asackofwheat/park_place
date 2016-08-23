@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <h1>MyParks</h1><hr>
+      <% current_user.parks.each do |park| %>
+        <%= link_to park.parkname, park %><br>
+      <% end %>
+      <br>
+
+    </div>
+  </div>
+</div>
